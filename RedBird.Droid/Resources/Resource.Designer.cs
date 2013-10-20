@@ -45,7 +45,16 @@ namespace RedBird.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int icon = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int launcher = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int splash_white = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int splash_white_bird = 2130837507;
 			
 			static Drawable()
 			{
@@ -60,8 +69,17 @@ namespace RedBird.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050000
-			public const int MyButton = 2131034112;
+			// aapt resource value: 0x7f070000
+			public const int Text = 2131165184;
+			
+			// aapt resource value: 0x7f070003
+			public const int showCustomNotification = 2131165187;
+			
+			// aapt resource value: 0x7f070001
+			public const int showDialog = 2131165185;
+			
+			// aapt resource value: 0x7f070002
+			public const int showStandardNotification = 2131165186;
 			
 			static Id()
 			{
@@ -77,7 +95,7 @@ namespace RedBird.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Home = 2130903040;
 			
 			static Layout()
 			{
@@ -85,6 +103,22 @@ namespace RedBird.Droid
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f060000
+			public const int main_menu = 2131099648;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}
@@ -104,6 +138,22 @@ namespace RedBird.Droid
 			}
 			
 			private String()
+			{
+			}
+		}
+		
+		public partial class Style
+		{
+			
+			// aapt resource value: 0x7f050000
+			public const int Theme_Splash = 2131034112;
+			
+			static Style()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Style()
 			{
 			}
 		}

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <!-- Example of items in the overflow menu -->
+  <item android:id="@+id/showDialog"
+      android:title="Show a dialog"
+      android:showAsAction="never" />
+  <item android:id="@+id/showStandardNotification"
+      android:title="Show a basic notification"
+      android:showAsAction="never" />
+  <item android:id="@+id/showCustomNotification"
+      android:title="Show a custom notification"
+      android:showAsAction="never" />
+</menu>
