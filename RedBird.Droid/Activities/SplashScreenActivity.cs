@@ -5,7 +5,7 @@ namespace RedBird.Droid.Activities
     using Android.OS;
     using System.Threading;
 
-    [Activity(Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashScreenActivity : Activity
     {
         protected override void OnCreate(Bundle bundle)

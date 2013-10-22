@@ -56,6 +56,9 @@ namespace RedBird.Droid
 			// aapt resource value: 0x7f020003
 			public const int splash_white_bird = 2130837507;
 			
+			// aapt resource value: 0x7f020004
+			public const int splashscreen = 2130837508;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -70,7 +73,7 @@ namespace RedBird.Droid
 		{
 			
 			// aapt resource value: 0x7f070000
-			public const int Text = 2131165184;
+			public const int buttonUpdate = 2131165184;
 			
 			// aapt resource value: 0x7f070003
 			public const int showCustomNotification = 2131165187;
@@ -130,7 +133,7 @@ namespace RedBird.Droid
 			public const int ApplicationName = 2130968577;
 			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ShowMore = 2130968576;
 			
 			static String()
 			{

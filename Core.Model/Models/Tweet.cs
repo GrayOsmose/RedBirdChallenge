@@ -32,12 +32,17 @@
         // Public Methods
         public string GetShortMessage()
         {
-            return pMessage == null || pMessage.Length > TweetData.TweetShortLenght ? pMessage : pMessage.Substring(0, 29);
+            return pMessage == null || pMessage.Length > TweetData.TweetShortLenght ? pMessage : string.Format("{0}...",pMessage.Substring(0, 29));
         }
 
         public void ReadMessage()
         {
             IsReaded = true;
+        }
+
+        public override string ToString()
+        {
+            return GetShortMessage();
         }
     }
 }

@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
+    <AndroidResource Include="Resources\Values-ru\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
@@ -81,6 +82,7 @@
     <AndroidResource Include="Resources\Menu\main_menu.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\Drawable\splashscreen.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Activities\Fragments\" />
