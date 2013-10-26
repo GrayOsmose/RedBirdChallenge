@@ -1,4 +1,6 @@
-﻿namespace RobinDemo.Provider
+﻿using System;
+
+namespace RobinDemo.Provider
 {
     using System.Linq;
     using System.Collections.Generic;
@@ -20,7 +22,34 @@
         {
             // create users
 
+            for (var mIndex = 0; mIndex < MockConstants.NumberOfUsers; mIndex++)
+            {
+                flUser.Add(new User
+	                {
+		                pName = string.Format("{0} {1}","MrNoPersonalLife", mIndex),
+						pPictureUrl = MockConstants.PictureUrl
+	                });
+            }
+
             // create tweets for each user and date for it of course
+
+
+	        var mUserIndex = 0;
+			for (var mIndex = 0; mIndex < MockConstants.NumberOfUserTweets; mIndex++)
+	        {
+		        flTweet.Add(new Tweet
+			        {
+						pMessage = MockConstants.TweetMessage,
+						pNumber = mIndex + 1,
+						pTime = DateTime.Now,
+						pTweetType = Tweet.TweetType.Mobile,
+						pUser = flUser[mUserIndex]
+			        });
+
+		        mUserIndex = (mUserIndex + 1) == MockConstants.NumberOfUsers
+			                     ? 0
+			                     : mUserIndex + 1;
+	        }
         }
 
         // Public Methods
@@ -39,9 +68,10 @@
 
             var mCount = mlTweets.Count();
 
-            outIsLast = mCount <= inLastNumber + MockConstants.TweetFirstTakeCount;
-            outLastNumber = inLastNumber + mCount;
+			outLastNumber = inLastNumber + mCount;
 
+			outIsLast = mCount < MockConstants.TweetFirstTakeCount;
+            
             return mlTweets.ToList();
         }
     }

@@ -55,7 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\Fragments\Home\TweetDescriptionFragment.cs" />
+    <Compile Include="Activities\Fragments\Home\TweetListFragment.cs" />
     <Compile Include="Activities\HomeActivity.cs" />
+    <Compile Include="Activities\HomeListActivity.cs" />
+    <Compile Include="Activities\SlaveActivity\TweetDescriptionActivity.cs" />
     <Compile Include="Activities\SplashScreenActivity.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -64,12 +68,20 @@
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\Layout-Large\Home.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\Layout\Home.xml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\Home.axml" />
+    <AndroidResource Include="Resources\Layout\HomeList.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Values\Strings.xml" />
+    <AndroidResource Include="Resources\Values\Strings.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
     <AndroidResource Include="Resources\Values-ru\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -84,9 +96,7 @@
     </AndroidResource>
     <AndroidResource Include="Resources\Drawable\splashscreen.xml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Activities\Fragments\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Core.Model\Core.Model.csproj">
       <Project>{7379408d-a055-4d45-81e0-62b20602f424}</Project>

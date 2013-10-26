@@ -1,7 +1,7 @@
 ﻿namespace Core.Model.Models
 {
     using System;
-    using Data;
+    using Core.Data;
 
     public class Tweet
     {
