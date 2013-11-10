@@ -45,19 +45,37 @@ namespace RedBird.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int icon = 2130837504;
+			public const int background_card = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int launcher = 2130837505;
+			public const int background_card_inverse = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int splash_white = 2130837506;
+			public const int drawer_shadow_dark = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int splash_white_bird = 2130837507;
+			public const int drawer_shadow_light = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int splashscreen = 2130837508;
+			public const int ic_app = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int ic_drawer_dark = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int ic_drawer_light = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int ic_launcher = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int splash_white = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int splash_white_bird = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int splashscreen = 2130837514;
 			
 			static Drawable()
 			{
@@ -72,23 +90,29 @@ namespace RedBird.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070002
-			public const int buttonUpdate = 2131165186;
-			
-			// aapt resource value: 0x7f070005
-			public const int showCustomNotification = 2131165189;
-			
-			// aapt resource value: 0x7f070003
-			public const int showDialog = 2131165187;
-			
-			// aapt resource value: 0x7f070004
-			public const int showStandardNotification = 2131165188;
+			// aapt resource value: 0x7f070000
+			public const int drawer_layout = 2131165184;
 			
 			// aapt resource value: 0x7f070001
-			public const int tweet_details = 2131165185;
+			public const int frame_content = 2131165185;
 			
-			// aapt resource value: 0x7f070000
-			public const int tweet_fragment = 2131165184;
+			// aapt resource value: 0x7f070004
+			public const int frame_details = 2131165188;
+			
+			// aapt resource value: 0x7f070002
+			public const int left_drawer = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int right_drawer = 2131165187;
+			
+			// aapt resource value: 0x7f070007
+			public const int showCustomNotification = 2131165191;
+			
+			// aapt resource value: 0x7f070005
+			public const int showDialog = 2131165189;
+			
+			// aapt resource value: 0x7f070006
+			public const int showStandardNotification = 2131165190;
 			
 			static Id()
 			{
@@ -104,10 +128,13 @@ namespace RedBird.Droid
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Home = 2130903040;
+			public const int activity_home = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int HomeList = 2130903041;
+			public const int fragment_tweet_details = 2130903041;
+			
+			// aapt resource value: 0x7f030002
+			public const int item_menu = 2130903042;
 			
 			static Layout()
 			{
@@ -123,7 +150,7 @@ namespace RedBird.Droid
 		{
 			
 			// aapt resource value: 0x7f060000
-			public const int main_menu = 2131099648;
+			public const int menu_main = 2131099648;
 			
 			static Menu()
 			{
@@ -143,6 +170,12 @@ namespace RedBird.Droid
 			
 			// aapt resource value: 0x7f040000
 			public const int ShowMore = 2130968576;
+			
+			// aapt resource value: 0x7f040003
+			public const int drawer_close = 2130968579;
+			
+			// aapt resource value: 0x7f040002
+			public const int drawer_open = 2130968578;
 			
 			static String()
 			{

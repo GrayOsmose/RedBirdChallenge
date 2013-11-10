@@ -55,28 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activities\Fragments\Home\TweetDescriptionFragment.cs" />
-    <Compile Include="Activities\Fragments\Home\TweetListFragment.cs" />
-    <Compile Include="Activities\HomeActivity.cs" />
-    <Compile Include="Activities\HomeListActivity.cs" />
-    <Compile Include="Activities\SlaveActivity\TweetDescriptionActivity.cs" />
+    <Compile Include="Activities\HomeFragmentActivity.cs" />
+    <Compile Include="Fragments\Home\TweetDetailsFragment.cs" />
+    <Compile Include="Fragments\Home\TweetListFragment.cs" />
+    <Compile Include="Activities\LowLevel\TweetDitailsActivity.cs" />
     <Compile Include="Activities\SplashScreenActivity.cs" />
     <Compile Include="App.cs" />
+    <Compile Include="Helpers\MyActionBarDrawerToggle.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
-    <AndroidResource Include="Resources\Layout-Large\Home.xml">
+    <AndroidResource Include="Resources\Layout\activity_home.xml" />
+    <AndroidResource Include="Resources\Layout\item_menu.axml" />
+    <AndroidResource Include="Resources\Layout\fragment_tweet_details.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\Layout\Home.xml">
-      <SubType>AndroidResource</SubType>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Layout\HomeList.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml">
@@ -86,17 +82,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\Drawable\launcher.png" />
+    <AndroidResource Include="Resources\Drawable\ic_app.png" />
     <AndroidResource Include="Resources\Values\Styles.xml" />
     <AndroidResource Include="Resources\Drawable\splash_white.jpg" />
-    <AndroidResource Include="Resources\Drawable\icon.png" />
+    <AndroidResource Include="Resources\Drawable\ic_launcher.png" />
     <AndroidResource Include="Resources\Drawable\splash_white_bird.jpg" />
-    <AndroidResource Include="Resources\Menu\main_menu.xml">
+    <AndroidResource Include="Resources\Menu\menu_main.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\Drawable\splashscreen.xml" />
+    <AndroidResource Include="Resources\Drawable\background_card_inverse.9.png" />
+    <AndroidResource Include="Resources\Drawable\background_card.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_drawer_dark.png" />
+    <AndroidResource Include="Resources\Drawable-hdpi\ic_drawer_light.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_drawer_dark.png" />
+    <AndroidResource Include="Resources\Drawable-mdpi\ic_drawer_light.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\drawer_shadow_dark.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\drawer_shadow_light.9.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_drawer_dark.png" />
+    <AndroidResource Include="Resources\Drawable-xhdpi\ic_drawer_light.png" />
+    <AndroidResource Include="Resources\Layout-Large\activity_home.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ActivitiesLow\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core.Model\Core.Model.csproj">
       <Project>{7379408d-a055-4d45-81e0-62b20602f424}</Project>

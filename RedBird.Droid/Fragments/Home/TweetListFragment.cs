@@ -1,15 +1,15 @@
-namespace RedBird.Droid.Activities.Fragments.Home
+using RedBird.Droid.Activities.LowLevel;
+
+namespace RedBird.Droid.Fragments.Home
 {
-	using Android.App;
 	using Android.Content;
 	using Android.OS;
 	using Android.Views;
 	using Android.Widget;
 	using Core.Model.Models;
-	using SlaveActivity;
 	using System.Collections.ObjectModel;
 
-	public class TweetListFragment : ListFragment
+	public class TweetListFragment : Android.Support.V4.App.ListFragment
 	{
 		// Fields
 		private ObservableCollection<Tweet> foTweet;
@@ -36,16 +36,16 @@ namespace RedBird.Droid.Activities.Fragments.Home
 				// Have the list highlight this item and show the data.
 				ListView.SetItemChecked(inPosition, true);
 				// Check what fragment is shown, replace if needed.
-				var details = FragmentManager.FindFragmentById(Resource.Id.tweet_details) as TweetDescriptionFragment;
+				var details = FragmentManager.FindFragmentById(Resource.Id.frame_details) as TweetDetailsFragment;
 
 				if (details == null || details.TweetPosition != inPosition)
 				{
 					// Make new fragment to show this selection.
-					details = TweetDescriptionFragment.NewInstance(inPosition);
+					details = TweetDetailsFragment.NewInstance(inPosition);
 					// Execute a transaction, replacing any existing
 					// fragment with this one inside the frame.
 					var ft = FragmentManager.BeginTransaction();
-					ft.Replace(Resource.Id.tweet_details, details);
+					ft.Replace(Resource.Id.frame_details, details);
 					// ft.SetTransition(FragmentTransaction.TransitFragmentFade);
 					ft.Commit();
 				}
@@ -56,7 +56,7 @@ namespace RedBird.Droid.Activities.Fragments.Home
 				// the dialog fragment with selected text.
 
 				var intent = new Intent();
-				intent.SetClass(Activity, typeof(TweetDescriptionActivity));
+				intent.SetClass(Activity, typeof(TweetDitailsActivity));
 				intent.PutExtra("tweet", inPosition);
 				StartActivity(intent);
 			}
@@ -72,7 +72,7 @@ namespace RedBird.Droid.Activities.Fragments.Home
 
 			ListAdapter = new ArrayAdapter(Activity, Android.Resource.Layout.SimpleListItem1, foTweet);
 
-			var detailsFrame = Activity.FindViewById<View>(Resource.Id.tweet_details);
+			var detailsFrame = Activity.FindViewById<View>(Resource.Id.frame_details);
 			fIsDualPane = detailsFrame != null && detailsFrame.Visibility == ViewStates.Visible;
 
 			if (fIsDualPane)

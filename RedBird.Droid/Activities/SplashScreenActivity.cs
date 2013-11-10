@@ -16,7 +16,7 @@ namespace RedBird.Droid.Activities
 
             // Create your application here
             Thread.Sleep(600); // Simulate a long loading process on app startup.
-            StartActivity(typeof(HomeActivity));
+            StartActivity(typeof(HomeFragmentActivity));
         }
     }
 }

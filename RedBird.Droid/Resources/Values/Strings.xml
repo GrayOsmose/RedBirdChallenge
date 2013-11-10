@@ -2,4 +2,7 @@
 <resources>
     <string name="ShowMore">Show more</string>
     <string name="ApplicationName">RedBird</string>
+
+  <string name="drawer_open">Open</string>
+  <string name="drawer_close">Close</string>
 </resources>
